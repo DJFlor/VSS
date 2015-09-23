@@ -13,6 +13,9 @@
 		71491B811BB3310600D222ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71491B7F1BB3310600D222ED /* Main.storyboard */; };
 		71491B831BB3310600D222ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71491B821BB3310600D222ED /* Assets.xcassets */; };
 		71491B861BB3310600D222ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71491B841BB3310600D222ED /* LaunchScreen.storyboard */; };
+		71491B921BB331EC00D222ED /* UIView+StyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B8F1BB331EC00D222ED /* UIView+StyleSheet.m */; settings = {ASSET_TAGS = (); }; };
+		71491B931BB331EC00D222ED /* VSSStyleSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B911BB331EC00D222ED /* VSSStyleSheetManager.m */; settings = {ASSET_TAGS = (); }; };
+		71491B951BB3321900D222ED /* VSS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71491B941BB3321900D222ED /* VSS.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		71491B821BB3310600D222ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71491B851BB3310600D222ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71491B871BB3310600D222ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71491B8E1BB331EC00D222ED /* UIView+StyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+StyleSheet.h"; path = "Lib/UIView+StyleSheet.h"; sourceTree = "<group>"; };
+		71491B8F1BB331EC00D222ED /* UIView+StyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+StyleSheet.m"; path = "Lib/UIView+StyleSheet.m"; sourceTree = "<group>"; };
+		71491B901BB331EC00D222ED /* VSSStyleSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VSSStyleSheetManager.h; path = Lib/VSSStyleSheetManager.h; sourceTree = "<group>"; };
+		71491B911BB331EC00D222ED /* VSSStyleSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VSSStyleSheetManager.m; path = Lib/VSSStyleSheetManager.m; sourceTree = "<group>"; };
+		71491B941BB3321900D222ED /* VSS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VSS.plist; path = Lib/VSS.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		71491B751BB3310600D222ED /* VSS */ = {
 			isa = PBXGroup;
 			children = (
+				71491B8D1BB3315600D222ED /* VSSLib */,
 				71491B791BB3310600D222ED /* AppDelegate.h */,
 				71491B7A1BB3310600D222ED /* AppDelegate.m */,
 				71491B7C1BB3310600D222ED /* ViewController.h */,
@@ -77,6 +86,18 @@
 				71491B771BB3310600D222ED /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71491B8D1BB3315600D222ED /* VSSLib */ = {
+			isa = PBXGroup;
+			children = (
+				71491B941BB3321900D222ED /* VSS.plist */,
+				71491B8E1BB331EC00D222ED /* UIView+StyleSheet.h */,
+				71491B8F1BB331EC00D222ED /* UIView+StyleSheet.m */,
+				71491B901BB331EC00D222ED /* VSSStyleSheetManager.h */,
+				71491B911BB331EC00D222ED /* VSSStyleSheetManager.m */,
+			);
+			name = VSSLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +160,7 @@
 				71491B861BB3310600D222ED /* LaunchScreen.storyboard in Resources */,
 				71491B831BB3310600D222ED /* Assets.xcassets in Resources */,
 				71491B811BB3310600D222ED /* Main.storyboard in Resources */,
+				71491B951BB3321900D222ED /* VSS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71491B931BB331EC00D222ED /* VSSStyleSheetManager.m in Sources */,
+				71491B921BB331EC00D222ED /* UIView+StyleSheet.m in Sources */,
 				71491B7E1BB3310600D222ED /* ViewController.m in Sources */,
 				71491B7B1BB3310600D222ED /* AppDelegate.m in Sources */,
 				71491B781BB3310600D222ED /* main.m in Sources */,

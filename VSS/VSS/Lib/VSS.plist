@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UILabel</key>
+	<dict>
+		<key>default</key>
+		<dict>
+			<key>color</key>
+			<string>#000000</string>
+			<key>text</key>
+			<string>Default Label</string>
+		</dict>
+		<key>red</key>
+		<dict>
+			<key>color</key>
+			<string>#FF0000</string>
+			<key>text</key>
+			<string>Red Label</string>
+		</dict>
+		<key>blue</key>
+		<dict>
+			<key>color</key>
+			<string>#0000FF</string>
+			<key>text</key>
+			<string>Blue Label</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
