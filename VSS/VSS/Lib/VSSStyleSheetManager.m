@@ -8,6 +8,8 @@
 
 #import "VSSStyleSheetManager.h"
 #import "UIView+StyleSheet.h"
+#import "UIColor+HexString.h"
+#import <objc/runtime.h>
 
 @interface VSSStyleSheetManager ()
 
@@ -24,8 +26,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instance = [[VSSStyleSheetManager alloc] init];
+        [_instance loadStyles];
     });
-    [_instance loadStyles];
     return _instance;
 }
 
@@ -46,22 +48,27 @@
             //Our view is not stylable, it will get the default style.
             style = classStyles[@"default"];
         }
+        for (NSString *key in [style allKeys]) {
+            SEL selector = NSSelectorFromString(key);
+            NSString *val = [style valueForKey:key];
+            if ([view respondsToSelector:selector]) {
+                NSLog(@"Applying value '%@' to atrribute '%@'",val,key);
+                if ([key hasSuffix:@"olor"]) {
+                    //It's a color!
+                    UIColor *color = [UIColor colorFromHexString:val];
+                    [view setValue:color forKey:key];
+                }
+                else {
+                    [view setValue:val forKey:key];
+                }
+            }
+        }
     }
     
 }
 
 - (void)loadStyles {
-    NSString *plistFile;
-    
-    if (NSClassFromString(@"VSSTests") != nil) {
-        //we are running from testmode
-        plistFile = @"SampleVSS.plist";
-    }
-    else {
-        plistFile = @"VSS.plist";
-    }
-    
-    NSString *plistPath = [[NSBundle bundleForClass:self.class] pathForResource:plistFile ofType:@"plist"];
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"VSS" ofType:@"plist"];
     NSAssert(plistPath != nil, @"VSS.plist not found in project!  See README.md for details.");
     _styles = [NSDictionary dictionaryWithContentsOfFile:plistPath];
 }

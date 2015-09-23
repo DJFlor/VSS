@@ -1,0 +1,16 @@
+//
+//  VSSPCH.pch
+//  VSS
+//
+//  Created by Flor, Daniel J on 9/23/15.
+//  Copyright © 2015 ObiDan. All rights reserved.
+//
+
+#ifndef VSSPCH_pch
+#define VSSPCH_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIView+StyleSheet.h"
+
+#endif /* VSSPCH_pch */

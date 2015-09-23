@@ -1,5 +1,5 @@
 //
-//  UIView+StyleSheet.h
+//  VSSLabel.h
 //  VSS
 //
 //  Created by Flor, Daniel J on 9/23/15.
@@ -7,17 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+StyleSheet.h"
 
-@protocol stylable
+@interface VSSLabel : UILabel <stylable>
 
 @property NSString *style;
-
-@end
-
-@interface UIView (StyleSheet)
-
-- (void)applyStyles;
-- (void)oldLayoutSubviews;
-+ (void)swizzleLayoutSubviews;
 
 @end

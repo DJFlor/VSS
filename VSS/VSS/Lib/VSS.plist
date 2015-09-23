@@ -11,6 +11,16 @@
 			<key>text</key>
 			<string>Default Label</string>
 		</dict>
+	</dict>
+	<key>VSSLabel</key>
+	<dict>
+		<key>default</key>
+		<dict>
+			<key>color</key>
+			<string>#000000</string>
+			<key>text</key>
+			<string>Default Label</string>
+		</dict>
 		<key>red</key>
 		<dict>
 			<key>color</key>
@@ -20,6 +30,15 @@
 		</dict>
 		<key>blue</key>
 		<dict>
+			<key>color</key>
+			<string>#0000FF</string>
+			<key>text</key>
+			<string>Blue Label</string>
+		</dict>
+		<key>crazy blue</key>
+		<dict>
+			<key>font</key>
+			<string></string>
 			<key>color</key>
 			<string>#0000FF</string>
 			<key>text</key>

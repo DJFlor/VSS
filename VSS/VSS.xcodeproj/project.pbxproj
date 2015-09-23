@@ -16,6 +16,9 @@
 		71491B921BB331EC00D222ED /* UIView+StyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B8F1BB331EC00D222ED /* UIView+StyleSheet.m */; settings = {ASSET_TAGS = (); }; };
 		71491B931BB331EC00D222ED /* VSSStyleSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B911BB331EC00D222ED /* VSSStyleSheetManager.m */; settings = {ASSET_TAGS = (); }; };
 		71491B951BB3321900D222ED /* VSS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71491B941BB3321900D222ED /* VSS.plist */; settings = {ASSET_TAGS = (); }; };
+		71491B9A1BB3343E00D222ED /* VSSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B991BB3343E00D222ED /* VSSLabel.m */; settings = {ASSET_TAGS = (); }; };
+		71491B9D1BB334B200D222ED /* VSSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B9C1BB334B200D222ED /* VSSView.m */; settings = {ASSET_TAGS = (); }; };
+		71491BA01BB3414600D222ED /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B9F1BB3414600D222ED /* UIColor+HexString.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,13 @@
 		71491B901BB331EC00D222ED /* VSSStyleSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VSSStyleSheetManager.h; path = Lib/VSSStyleSheetManager.h; sourceTree = "<group>"; };
 		71491B911BB331EC00D222ED /* VSSStyleSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VSSStyleSheetManager.m; path = Lib/VSSStyleSheetManager.m; sourceTree = "<group>"; };
 		71491B941BB3321900D222ED /* VSS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VSS.plist; path = Lib/VSS.plist; sourceTree = "<group>"; };
+		71491B961BB332DE00D222ED /* VSS.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VSS.pch; path = Lib/VSS.pch; sourceTree = "<group>"; };
+		71491B981BB3343E00D222ED /* VSSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSSLabel.h; sourceTree = "<group>"; };
+		71491B991BB3343E00D222ED /* VSSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSSLabel.m; sourceTree = "<group>"; };
+		71491B9B1BB334B200D222ED /* VSSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSSView.h; sourceTree = "<group>"; };
+		71491B9C1BB334B200D222ED /* VSSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSSView.m; sourceTree = "<group>"; };
+		71491B9E1BB3414600D222ED /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "Lib/UIColor+HexString.h"; sourceTree = "<group>"; };
+		71491B9F1BB3414600D222ED /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "Lib/UIColor+HexString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,7 @@
 		71491B751BB3310600D222ED /* VSS */ = {
 			isa = PBXGroup;
 			children = (
+				71491B971BB333F300D222ED /* StylableViews */,
 				71491B8D1BB3315600D222ED /* VSSLib */,
 				71491B791BB3310600D222ED /* AppDelegate.h */,
 				71491B7A1BB3310600D222ED /* AppDelegate.m */,
@@ -96,8 +107,22 @@
 				71491B8F1BB331EC00D222ED /* UIView+StyleSheet.m */,
 				71491B901BB331EC00D222ED /* VSSStyleSheetManager.h */,
 				71491B911BB331EC00D222ED /* VSSStyleSheetManager.m */,
+				71491B961BB332DE00D222ED /* VSS.pch */,
+				71491B9E1BB3414600D222ED /* UIColor+HexString.h */,
+				71491B9F1BB3414600D222ED /* UIColor+HexString.m */,
 			);
 			name = VSSLib;
+			sourceTree = "<group>";
+		};
+		71491B971BB333F300D222ED /* StylableViews */ = {
+			isa = PBXGroup;
+			children = (
+				71491B981BB3343E00D222ED /* VSSLabel.h */,
+				71491B991BB3343E00D222ED /* VSSLabel.m */,
+				71491B9B1BB334B200D222ED /* VSSView.h */,
+				71491B9C1BB334B200D222ED /* VSSView.m */,
+			);
+			name = StylableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				71491B931BB331EC00D222ED /* VSSStyleSheetManager.m in Sources */,
+				71491B9A1BB3343E00D222ED /* VSSLabel.m in Sources */,
+				71491BA01BB3414600D222ED /* UIColor+HexString.m in Sources */,
 				71491B921BB331EC00D222ED /* UIView+StyleSheet.m in Sources */,
+				71491B9D1BB334B200D222ED /* VSSView.m in Sources */,
 				71491B7E1BB3310600D222ED /* ViewController.m in Sources */,
 				71491B7B1BB3310600D222ED /* AppDelegate.m in Sources */,
 				71491B781BB3310600D222ED /* main.m in Sources */,
@@ -287,6 +315,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VSS/Lib/VSS.pch;
 				INFOPLIST_FILE = VSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.obidan.VSS;
@@ -298,6 +328,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VSS/Lib/VSS.pch;
 				INFOPLIST_FILE = VSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.obidan.VSS;
