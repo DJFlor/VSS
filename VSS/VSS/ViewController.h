@@ -1,5 +1,5 @@
 //
-//  UIView+StyleSheet.h
+//  ViewController.h
 //  VSS
 //
 //  Created by Flor, Daniel J on 9/23/15.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (StyleSheet)
+@interface ViewController : UIViewController
 
-- (void)applyStyles;
-- (void)oldLayoutSubviews;
 
 @end
+
