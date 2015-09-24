@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIView+StyleSheet.h"
 
-@interface VSSView <stylable> : UIView
+@interface VSSView : UIView <stylable>
 
 @property NSString *style;
 

@@ -16,6 +16,8 @@
 	<dict>
 		<key>default</key>
 		<dict>
+			<key>backgroundColor</key>
+			<string>#EEEEEE</string>
 			<key>color</key>
 			<string>#000000</string>
 			<key>text</key>
@@ -35,14 +37,38 @@
 			<key>text</key>
 			<string>Blue Label</string>
 		</dict>
-		<key>crazy blue</key>
+		<key>alpha blue</key>
 		<dict>
-			<key>font</key>
-			<string></string>
 			<key>color</key>
-			<string>#0000FF</string>
+			<string>#440000FF</string>
 			<key>text</key>
-			<string>Blue Label</string>
+			<string>Alpha Blue Label</string>
+		</dict>
+	</dict>
+	<key>UIView</key>
+	<dict>
+		<key>default</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#FFFFFF</string>
+		</dict>
+	</dict>
+	<key>VSSView</key>
+	<dict>
+		<key>default</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#CCCCCC</string>
+		</dict>
+		<key>light red</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#FF9999</string>
+		</dict>
+		<key>light green</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#99FF99</string>
 		</dict>
 	</dict>
 </dict>
