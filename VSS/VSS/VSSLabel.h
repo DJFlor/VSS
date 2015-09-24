@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIView+StyleSheet.h"
 
-@interface VSSLabel : UILabel <stylable>
+@interface VSSLabel : UILabel <styleable>
 
 @property NSString *style;
 

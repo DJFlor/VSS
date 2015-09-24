@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol stylable
+@protocol styleable
 
 @property NSString *style;
 

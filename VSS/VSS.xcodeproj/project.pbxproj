@@ -76,7 +76,7 @@
 		71491B751BB3310600D222ED /* VSS */ = {
 			isa = PBXGroup;
 			children = (
-				71491B971BB333F300D222ED /* StylableViews */,
+				71491B971BB333F300D222ED /* StyleableViews */,
 				71491B8D1BB3315600D222ED /* VSSLib */,
 				71491B791BB3310600D222ED /* AppDelegate.h */,
 				71491B7A1BB3310600D222ED /* AppDelegate.m */,
@@ -114,7 +114,7 @@
 			name = VSSLib;
 			sourceTree = "<group>";
 		};
-		71491B971BB333F300D222ED /* StylableViews */ = {
+		71491B971BB333F300D222ED /* StyleableViews */ = {
 			isa = PBXGroup;
 			children = (
 				71491B981BB3343E00D222ED /* VSSLabel.h */,
@@ -122,7 +122,7 @@
 				71491B9B1BB334B200D222ED /* VSSView.h */,
 				71491B9C1BB334B200D222ED /* VSSView.m */,
 			);
-			name = StylableViews;
+			name = StyleableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
