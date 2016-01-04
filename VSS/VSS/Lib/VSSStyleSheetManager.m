@@ -39,10 +39,9 @@
     NSDictionary *classStyles = _styles[className];
     if (classStyles != nil) {
         NSDictionary *style;
-        if ([view conformsToProtocol:@protocol(styleable)]) {
-            //Our view implements the styleable protocol, may not be default...
-            UIView <styleable> *styledView = (UIView <styleable> *)view;
-            style = classStyles[styledView.style];
+        if ([view style]) {
+            //Our view has a style set, may not be default...
+            style = classStyles[[view style]];
         }
         else {
             //Our view is not styleable, it will get the default style.
