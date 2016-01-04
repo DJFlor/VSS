@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		71491B781BB3310600D222ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B771BB3310600D222ED /* main.m */; };
 		71491B7B1BB3310600D222ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B7A1BB3310600D222ED /* AppDelegate.m */; };
-		71491B7E1BB3310600D222ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71491B7D1BB3310600D222ED /* ViewController.m */; };
 		71491B811BB3310600D222ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71491B7F1BB3310600D222ED /* Main.storyboard */; };
 		71491B831BB3310600D222ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71491B821BB3310600D222ED /* Assets.xcassets */; };
 		71491B861BB3310600D222ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71491B841BB3310600D222ED /* LaunchScreen.storyboard */; };
@@ -24,8 +23,6 @@
 		71491B771BB3310600D222ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71491B791BB3310600D222ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		71491B7A1BB3310600D222ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		71491B7C1BB3310600D222ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		71491B7D1BB3310600D222ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		71491B801BB3310600D222ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71491B821BB3310600D222ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71491B851BB3310600D222ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,11 +67,10 @@
 		71491B751BB3310600D222ED /* VSS */ = {
 			isa = PBXGroup;
 			children = (
+				71491B941BB3321900D222ED /* VSS.plist */,
 				71491B8D1BB3315600D222ED /* VSSLib */,
 				71491B791BB3310600D222ED /* AppDelegate.h */,
 				71491B7A1BB3310600D222ED /* AppDelegate.m */,
-				71491B7C1BB3310600D222ED /* ViewController.h */,
-				71491B7D1BB3310600D222ED /* ViewController.m */,
 				71491B7F1BB3310600D222ED /* Main.storyboard */,
 				71491B821BB3310600D222ED /* Assets.xcassets */,
 				71491B841BB3310600D222ED /* LaunchScreen.storyboard */,
@@ -95,7 +91,6 @@
 		71491B8D1BB3315600D222ED /* VSSLib */ = {
 			isa = PBXGroup;
 			children = (
-				71491B941BB3321900D222ED /* VSS.plist */,
 				71491B8E1BB331EC00D222ED /* UIView+StyleSheet.h */,
 				71491B8F1BB331EC00D222ED /* UIView+StyleSheet.m */,
 				71491B901BB331EC00D222ED /* VSSStyleSheetManager.h */,
@@ -181,7 +176,6 @@
 				71491B931BB331EC00D222ED /* VSSStyleSheetManager.m in Sources */,
 				71491BA01BB3414600D222ED /* UIColor+HexString.m in Sources */,
 				71491B921BB331EC00D222ED /* UIView+StyleSheet.m in Sources */,
-				71491B7E1BB3310600D222ED /* ViewController.m in Sources */,
 				71491B7B1BB3310600D222ED /* AppDelegate.m in Sources */,
 				71491B781BB3310600D222ED /* main.m in Sources */,
 			);

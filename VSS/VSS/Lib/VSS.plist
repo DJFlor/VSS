@@ -6,16 +6,6 @@
 	<dict>
 		<key>default</key>
 		<dict>
-			<key>color</key>
-			<string>#000000</string>
-			<key>text</key>
-			<string>Default Label</string>
-		</dict>
-	</dict>
-	<key>VSSLabel</key>
-	<dict>
-		<key>default</key>
-		<dict>
 			<key>backgroundColor</key>
 			<string>#EEEEEE</string>
 			<key>color</key>
@@ -52,10 +42,7 @@
 			<key>backgroundColor</key>
 			<string>#FFFFFF</string>
 		</dict>
-	</dict>
-	<key>VSSView</key>
-	<dict>
-		<key>default</key>
+		<key>gray</key>
 		<dict>
 			<key>backgroundColor</key>
 			<string>#CCCCCC</string>
