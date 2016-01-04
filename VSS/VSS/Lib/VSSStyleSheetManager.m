@@ -33,7 +33,6 @@
 
 - (void)applyStyleToView:(UIView*)view {
     //TODO: pepper this full of assertions to enforce VSS.plist format
-    //TODO: add hierarchy to styles so that defaults applied first, THEN desired style!
     //Get the class name:
     NSString *className = NSStringFromClass(view.class);
     NSDictionary *classStyles = _styles[className];
@@ -47,18 +46,35 @@
             //Our view is not styleable, it will get the default style.
             style = classStyles[@"default"];
         }
-        for (NSString *key in [style allKeys]) {
-            SEL selector = NSSelectorFromString(key);
-            NSString *val = [style valueForKey:key];
-            if ([view respondsToSelector:selector]) {
-                NSLog(@"Applying value '%@' to atrribute '%@'",val,key);
-                if ([key hasSuffix:@"olor"]) {
-                    //It's a color!
-                    UIColor *color = [UIColor colorFromHexString:val];
-                    [view setValue:color forKey:key];
-                }
-                else {
-                    [view setValue:val forKey:key];
+        for (NSString *path in [style allKeys]) {
+            id val = [style valueForKey:path];
+            NSObject *target = view;
+            NSArray *keys = [path componentsSeparatedByString:@"."];
+            for (int i = 0; i < keys.count; i++) {
+                NSString *key = keys[i];
+                SEL selector = NSSelectorFromString(key);
+                if ([target respondsToSelector:selector]) {
+                    if (i == keys.count - 1) {
+                        //We have found the leaf, set the target val!
+                        NSLog(@"Applying value '%@' to atrribute '%@'",val,key);
+                        if ([key hasSuffix:@"olor"]) {
+                            //It's a color!
+                            val = [UIColor colorFromHexString:val];
+                        }
+                        if ([key isEqualToString:@"transform"]) {
+                            NSArray *args = [val componentsSeparatedByString:@","];
+                            CGFloat angle = [args[0] floatValue] * M_PI / 180.f;
+                            CGFloat x = [args[1] floatValue];
+                            CGFloat y = [args[2] floatValue];
+                            CGFloat z = [args[3] floatValue];
+                            val = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(angle, x, y, z)];
+                        }
+                        [target setValue:val forKey:key];
+                    }
+                    else {
+                        NSLog(@"Retrieving property '%@'",key);
+                        target = [target valueForKey:key];
+                    }
                 }
             }
         }

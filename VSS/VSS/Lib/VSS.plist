@@ -13,6 +13,39 @@
 			<key>text</key>
 			<string>Default Label</string>
 		</dict>
+		<key>default 180 x</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#EEEEEE</string>
+			<key>color</key>
+			<string>#000000</string>
+			<key>text</key>
+			<string>Default 180 X</string>
+			<key>layer.transform</key>
+			<string>180.0,1.0,0.0,0.0</string>
+		</dict>
+		<key>default 180 y</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#EEEEEE</string>
+			<key>color</key>
+			<string>#000000</string>
+			<key>text</key>
+			<string>Default 180 y</string>
+			<key>layer.transform</key>
+			<string>180.0,0.0,1.0,0.0</string>
+		</dict>
+		<key>default 180 z</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>#EEEEEE</string>
+			<key>color</key>
+			<string>#000000</string>
+			<key>text</key>
+			<string>Default 180 Z</string>
+			<key>transform</key>
+			<string>180.0,0.0,0.0,1.0</string>
+		</dict>
 		<key>red</key>
 		<dict>
 			<key>color</key>
@@ -41,6 +74,17 @@
 		<dict>
 			<key>backgroundColor</key>
 			<string>#FFFFFF</string>
+		</dict>
+		<key>black using alpha property</key>
+		<dict>
+			<key>clipsToBounds</key>
+			<true/>
+			<key>layer.cornerRadius</key>
+			<integer>25</integer>
+			<key>backgroundColor</key>
+			<string>#000000</string>
+			<key>alpha</key>
+			<real>0.25</real>
 		</dict>
 		<key>gray</key>
 		<dict>
