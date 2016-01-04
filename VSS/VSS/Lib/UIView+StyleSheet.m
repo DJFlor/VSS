@@ -17,10 +17,25 @@
     [[VSSStyleSheetManager instance] applyStyleToView:weakSelf]; //...and apply!
 }
 
+- (void)setStyle:(NSString *)style {
+    // The very first time a style is set on a UIView, we swizzle the layout!
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //do it once, and only once!
+        [UIView swizzleLayoutSubviews];
+    });
+    // set the associated style string, so we have it later.
+    objc_setAssociatedObject(self, @selector(style), style, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)style {
+    return objc_getAssociatedObject(self, @selector(style));
+}
+
 + (void)swizzleLayoutSubviews {
-    //call this static method in the ApplicationDelegate's applicationDidFinishLaunchingWithOptions.
+    //this static method is invoked the first time a UIView's style is set.
     //a method to swizzle the layoutSubviews call, so we can force all UIViews using this
-    //category to first appoy the style, and THEN do the original layout subviews.  Swanky, huh?
+    //category to first apply the style, and THEN do the original layout subviews.  Swanky, huh?
     Method oldLayout = class_getInstanceMethod(UIView.class, @selector(layoutSubviews));
     Method newLayout = class_getInstanceMethod(UIView.class, @selector(oldLayoutSubviews));
     method_exchangeImplementations(oldLayout, newLayout);

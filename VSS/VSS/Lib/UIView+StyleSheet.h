@@ -8,13 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol styleable
-
-@property NSString *style;
-
-@end
-
 @interface UIView (StyleSheet)
+
+@property IBInspectable NSString *style;
 
 - (void)applyStyles;
 - (void)oldLayoutSubviews;
